@@ -1,0 +1,8 @@
+before updating any of the files. Please be reminded that 
+bootstrap-formhelpers-colorpicker.js line 46 and 121 must have the code below
+This is to fix the problem for canvas on IE8
+if (!document.createElement('canvas').getContext) {
+    return;
+}
+
+do not attempt to use excanvas.js as its not going to work for some unknown reason.

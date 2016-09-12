@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="min/styles.min.css" rel="stylesheet" media="screen">
+    <style>
+      .input-group.bfh-colorpicker-toggle .input-group-addon {
+        padding: 5px 8px;
+      }
+
+      .bfh-colorpicker-toggle .bfh-colorpicker-icon {
+        width: 22px;
+        height: 22px;
+      }
+
+      .bfh-colorpicker-palette {
+        cursor: crosshair;
+      }
+
+      .open > .bfh-colorpicker-popover {
+        padding: 5px 5px 0px 5px;
+      }
+
+      .input-group .form-control {
+        width: 99.0%;
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="min/pickers.min.js"></script>
+    <script>
+      $(function() {
+        JFCustomWidget.subscribe('ready', function(data) {
+
+          var widgetSettings = $.extend({}, JFCustomWidget.getWidgetSettings(), {
+            pickerType: 'colorpicker',
+          });
+
+          var picker = new Pickers(data, widgetSettings);
+          picker.initialize();
+
+          JFCustomWidget.subscribe("submit", function() {
+            JFCustomWidget.sendSubmit(picker.getData());
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="colorpicker" data-name="colorpicker" data-close="true" data-color="" data-placeholder="Click and select your color" class="dn"></div>
+  </body>
+
+</html>
