@@ -16,12 +16,12 @@ module.exports = function (grunt) {
       },
       all: {
         files : {
-          'js/scripts.js' : [
+          'min/scripts.min.js' : [
             '../lib/javascript/Class.js',
             '../lib/polyfills/function_bind.js',
             'js/jquerySlider.js',
-            'min/scripts.min.js'
-          ]js
+            'js/scripts.js'
+          ]
         }
       }
     },
