@@ -342,7 +342,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: $('img').height() + self.getSliderContainerActualHeight()
+            height: $('img').height() + this.getSliderContainerActualHeight()
         });
     },
 
