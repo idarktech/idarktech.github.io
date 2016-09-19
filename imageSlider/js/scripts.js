@@ -260,7 +260,7 @@ var Slider = Config.extend({
             var height = $(this).height();
             var first = Math.max(width, height);
 
-            // console.log($(this), width, height , first);
+            console.log($(this), width, height , first);
 
             if ( width === first ) {
                 if ( width > self.windowWidth ) {
@@ -342,7 +342,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: height || $('.slidesjs-slide').height()
+            height: height || $('.slides').height()
         });
     },
 
@@ -350,8 +350,7 @@ var Slider = Config.extend({
      * Get sliders actual height
      */
     getSliderContainerActualHeight: function() {
-        return $('.slidesjs-slide').height() - this.getNavigationsHeight();
-        console.log($('.slidesjs-slide').height());
+        return $('.slides').height() - this.getNavigationsHeight();        
     },
 
     /**
