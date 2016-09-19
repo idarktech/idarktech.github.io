@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       },
       all: {
         files : {
-          'min/scripts.min.js' : [
+          'js/scripts.js' : [
             '../lib/javascript/Class.js',
             '../lib/polyfills/function_bind.js',
             'js/jquerySlider.js',
