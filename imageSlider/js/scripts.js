@@ -342,7 +342,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: $('img').height() + this.getSliderContainerActualHeight()
+            height: height || $('body').outerHeight(true)
         });
     },
 
@@ -350,7 +350,7 @@ var Slider = Config.extend({
      * Get sliders actual height
      */
     getSliderContainerActualHeight: function() {
-        return this.windowHeight - this.getNavigationsHeight();
+        return $('body').outerHeight(true) - this.getNavigationsHeight();
     },
 
     /**
