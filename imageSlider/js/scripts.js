@@ -350,7 +350,7 @@ var Slider = Config.extend({
      * Get sliders actual height
      */
     getSliderContainerActualHeight: function() {
-        return $('body').outerHeight(true) - this.getNavigationsHeight();
+        return this.windowHeight - this.getNavigationsHeight();
     },
 
     /**
