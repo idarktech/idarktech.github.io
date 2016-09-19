@@ -1,0 +1,7 @@
+#!/bin/bash
+USERNAME="kenneth"
+REMOTE_PATH="/www/v3/kenneth/widgets/imageSlider/"
+REMOTE_HOST="kenneth.jotform.pro"
+ssh $USERNAME@$REMOTE_HOST "sudo mkdir -p $REMOTE_PATH/"
+rsync --exclude "sync" --exclude "node_modules" -aze ssh2 . $USERNAME@$USERNAME.jotform.pro:$REMOTE_PATH --verbose
+ssh2 $USERNAME@$USERNAME.jotform.pro "sudo chmod 777 -R $REMOTE_PATH/"

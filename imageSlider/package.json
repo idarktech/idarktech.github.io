@@ -1,0 +1,10 @@
+{
+  "name": "imageSlider",
+  "version": "0.1.0",
+  "description": "Image Slider widget",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify" : "latest",
+    "grunt-contrib-cssmin" : "latest"
+  }
+}
