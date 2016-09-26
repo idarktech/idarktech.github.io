@@ -217,7 +217,7 @@
         zIndex: 0
       });
       width = $element.width();
-      height = ((this.options.height / this.options.width) * width)-30; //$element.height();
+      height = if(!isMobile){return (this.options.height / this.options.width) * width}else{return ((this.options.height / this.options.width) * width)-30}; //$element.height();
       this.options.width = width;
       this.options.height = height;
       return $(".slidesjs-control, .slidesjs-container", $element).css({
