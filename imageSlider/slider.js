@@ -5,7 +5,7 @@ var Slider = {
     numberOfImage: 0,
     init: function (qid, images, autoplay) {
         this.qid = qid;
-
+         console.log("test");
         if (images) {
             this.images = images.split("\n");
             this.numberOfImage = this.images.length;
@@ -99,5 +99,5 @@ var Slider = {
         $$('#cid_' + $this.qid + ' div.item').invoke("hide");
         $$('#cid_' + $this.qid + ' div.item')[$this.currentIndex - 1].show();
     },
-    console.log("test");
+   
 };
