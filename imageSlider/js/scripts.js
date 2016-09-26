@@ -268,11 +268,11 @@ var Slider = Config.extend({
                 }
 
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'auto'});
+                    $(this).css({height:'100%'});
                 }
             } else if ( height === first ) {
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'auto'});
+                    $(this).css({height:'100%'});
                 }
 
                 if ( width > self.windowWidth ) {
