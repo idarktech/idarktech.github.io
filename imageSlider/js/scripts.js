@@ -269,11 +269,11 @@ var Slider = Config.extend({
                 }
 
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'100%'});
+                    $(this).css({height:'auto'});
                 }
             } else if ( height === first ) {
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'100%'});
+                    $(this).css({height:'auto'});
                 }
 
                 if ( width > self.windowWidth ) {
@@ -360,6 +360,8 @@ var Slider = Config.extend({
     getNavigationsHeight: function() {
         return $('.slidesjs-navigation, .slidesjs-pagination').outerHeight(true);
     }
+
+    console.log(getParams());
 });
 
 $(function(){
@@ -367,4 +369,5 @@ $(function(){
         var params = JFCustomWidget.getWidgetSettings();
         var widget = new Slider(params);
     });
+
 });
