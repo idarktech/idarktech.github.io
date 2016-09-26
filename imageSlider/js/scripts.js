@@ -1,8 +1,7 @@
 var Config = Class.extend({
     params: {},
     initialize: function(params) {
-        this.setParams(params);
-        console.log(this.getSliderContainerActualHeight());
+        this.setParams(params);        
     },
 
     /**
