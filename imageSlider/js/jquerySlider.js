@@ -222,7 +222,7 @@
       this.options.height = height;
       return $(".slidesjs-control, .slidesjs-container", $element).css({
         width: width,
-        height: "auto"
+        height: height
       });
     };
     Plugin.prototype.next = function(effect) {
