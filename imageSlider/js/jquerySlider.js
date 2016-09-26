@@ -217,12 +217,12 @@
         zIndex: 0
       });
       width = $element.width();
-      height = $element.height();//(this.options.height / this.options.width) * width;
+      height = (this.options.height / this.options.width) * width; //$element.height();
       this.options.width = width;
       this.options.height = height;
       return $(".slidesjs-control, .slidesjs-container", $element).css({
         width: width,
-        height: height
+        height: "auto"
       });
     };
     Plugin.prototype.next = function(effect) {
