@@ -217,7 +217,7 @@
         zIndex: 0
       });
       width = $element.width();
-      height = if(typeof window.orientation == 'undefined'){return (this.options.height / this.options.width) * width}else{return ((this.options.height / this.options.width) * width)-30}; //$element.height();
+      height = (this.options.height / this.options.width) * width;//}else{return ((this.options.height / this.options.width) * width)-30}; //$element.height();
       this.options.width = width;
       this.options.height = height;
       return $(".slidesjs-control, .slidesjs-container", $element).css({
