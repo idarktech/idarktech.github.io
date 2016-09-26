@@ -2,6 +2,7 @@ var Config = Class.extend({
     params: {},
     initialize: function(params) {
         this.setParams(params);
+        console.log(params);
     },
 
     /**
@@ -359,9 +360,7 @@ var Slider = Config.extend({
      */
     getNavigationsHeight: function() {
         return $('.slidesjs-navigation, .slidesjs-pagination').outerHeight(true);
-    }
-
-    console.log(getParams());
+    }    
 });
 
 $(function(){
