@@ -243,6 +243,7 @@ var Slider = Config.extend({
             }, intervalValue);
         } else {
             this.resizeWidget();
+            console.log('resized');
         }
     },
 
@@ -268,11 +269,11 @@ var Slider = Config.extend({
                 }
 
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'100%'});
+                    $(this).css({height:'auto'});
                 }
             } else if ( height === first ) {
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'100%'});
+                    $(this).css({height:'auto'});
                 }
 
                 if ( width > self.windowWidth ) {
@@ -342,7 +343,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: height || $('body').outerHeight(true)
+            height: this.getSliderContainerActualHeight() || height
         });
     },
 
