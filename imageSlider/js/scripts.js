@@ -342,7 +342,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: height - 50 || $('body').outerHeight() - 50 
+            height: height || $('body').outerHeight()
         });
     },
 
