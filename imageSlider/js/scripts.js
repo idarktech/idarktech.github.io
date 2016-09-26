@@ -269,11 +269,11 @@ var Slider = Config.extend({
                 }
 
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'auto'});
+                    $(this).css({height:'100%'});
                 }
             } else if ( height === first ) {
                 if ( height > self.getSliderContainerActualHeight() ) {
-                    $(this).css({height:'auto'});
+                    $(this).css({height:'100%'});
                 }
 
                 if ( width > self.windowWidth ) {
@@ -343,7 +343,7 @@ var Slider = Config.extend({
      */
     resizeWidget: function(height) {
         JFCustomWidget.requestFrameResize({
-            height: this.getSliderContainerActualHeight() || height
+            height: height || this.getSliderContainerActualHeight()
         });
     },
 
