@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://js.jotform.com/JotFormCustomWidget.min.js"></script>
+        <style type="text/css">body{margin:0 !important;}</style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <audio id="player" controls controlsList="nodownload" style="width: 100%;">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </body>
+        <script type="text/javascript">
+            var player = document.getElementById('player');
+            //always subscribe to ready event and implement widget related code
+            //inside callback function , it is the best practice while developing widgets
+            JFCustomWidget.subscribe("ready", function(){
+                var mp3Source = document.getElementsByTagName('source')[0].src;
+                var mp3URL = JFCustomWidget.getWidgetSetting('url');
+                var autoPlay = JFCustomWidget.getWidgetSetting('autoplay');
+                mp3Source = mp3URL;
+                if (data1=="yes"){source.setAttribute('autoplay', ''); }
+                player.load();
+            });
+        </script>    
+</html>
