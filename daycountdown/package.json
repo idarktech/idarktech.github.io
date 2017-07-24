@@ -1,0 +1,9 @@
+{
+  "name": "Day Countdown",
+  "version": "0.1.0",
+  "description": "Day Countdown Widget",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify" : "latest"
+  }
+}
