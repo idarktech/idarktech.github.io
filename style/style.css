@@ -1,0 +1,179 @@
+body { background: url('../images/elton_bg.png')  #99f0ff;color: #3D3D3D; font-family: Helvetica, Arial, sans-serif; text-align: center; overflow: hidden; }
+
+h1, h2 { font-family: 'Lobster Two', cursive; font-weight: normal; margin: 0; }
+
+header h1 {font-family: Georgia, serif; font-size: 72px; }
+
+header h2, section h1 { font-size: 42px; }
+
+p { font-family: 'Ubuntu', sans-serif; font-size: 20px; line-height: 1.6em; text-align: left; width: 600px; padding: 0 100px; }
+
+a { color: #000; font-weight: bold; }
+
+header, section { margin: 40px auto;}
+
+section { display: inline-block; }
+
+.wrapper { position: relative; }
+
+.gallery { list-style-type: none; padding: 5px; width: 500px; }
+.gallery li { display: inline-block; margin: 5px; }
+
+#me, #about, #designed, #developed, #contact { position: absolute; }
+
+#designed, #developed, #contact {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#about {
+	left: 1200px;
+}
+
+#designed {
+	left: 2200px;
+	top: 900px;
+}
+
+#developed {
+	left: 800px;
+	top: 1200px;
+}
+
+#contact {
+	left: -900px;
+	top: 900px;
+}
+
+#contact p {
+font-family: 'Ubuntu', sans-serif;
+font-size: 15px;
+text-align: left;
+width: 600px;
+}
+
+#photo img{
+border: 8px solid #CCC;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-transition:1s;
+-moz-transition:1s;
+}
+#photo img:hover{
+border: 8px solid #A7A4A4;
+}
+#photo{
+width: 120px;
+float: left;
+margin-top: 10px;
+margin-left: 95px;
+margin-right: 10px;
+}
+
+.name {
+color: #ffffff;
+color:#000000\9;
+font-size: 69px;
+text-shadow:0px 0px 0 rgb(221,221,221),0px -1px 0 rgb(201,201,201),0px -2px 0 rgb(180,180,180),0px -3px 0 rgb(159,159,159), 0px -4px 0 rgb(138,138,138),0px -5px 4px rgba(0,0,0,0.35),0px -5px 1px rgba(0,0,0,0.5),0px 0px 4px rgba(0,0,0,.2);}
+
+/*---image descriptions---*/
+.item {
+    width:200px;
+    height:140px;    
+	border: 5px solid #fff;  
+    /* required to hide the image after resized */
+    overflow:hidden;
+    
+    /* for child absolute position */
+    position:relative;
+    
+    /* display div in line */
+    float:left;
+}
+.item .caption {
+    width:200px;
+    height:140px;  
+    background:#000;
+    color:#fff;
+    font-weight:bold;
+        
+    /* fix it at the bottom */
+    position:absolute;
+    left:0;
+    /* hide it by default */
+    display:none;
+    /* opacity setting */
+    filter:alpha(opacity=80);    /* ie  */
+    -moz-opacity:0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */  
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+}
+.item .caption a {
+    text-decoration:none;
+    color:#0cc7dd;
+    font-size:16px;    
+    
+    /* add spacing and make the whole row clickable*/
+    padding:5px;
+    display:block;
+    text-align: center;
+}
+.item .caption p {
+padding: 5px;
+margin: 0;
+font-size: 12px;
+width: auto;
+font-weight: normal;
+}
+.item img {
+    border:0;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.clear {
+    clear:both;    
+}
+
+/*----menu----*/
+nav {
+font-family: 'Ubuntu';
+cursor:move;
+border: 1px solid whiteSmoke;
+width: 34%;
+height: 20px;
+padding: 10px;
+background: rgba(0, 41, 255, 0.09);
+background:whiteSmoke\9;
+position:absolute;
+left: 33%;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+nav a {
+	color: #000;	
+	text-decoration: none;
+	padding:5px;
+}
+.navactive, nav a:hover {
+background:white;
+border-radius:5px;
+padding:5px;
+}
+
+nav li {
+float: left;
+margin-left: 15px;
+}
+.draggablemenu{
+	text-align: center;
+	width:100%;
+}
